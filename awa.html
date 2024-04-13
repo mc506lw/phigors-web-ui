@@ -43,11 +43,40 @@
         <img src="back.svg">
     </a>
 
-    <script src="particles.js">
-    document.querySelectorAll('.parallelogram').forEach(function(parallelogram) {
-        parallelogram.addEventListener('click', function() {
-        this.style.width = this.style.width === '1000px' ? '100px' : '1000px';
+    <script src="particles.js"></script>
+<script>
+    // 切换宽度的函数
+    function toggleWidth(event) {
+        // 如果当前元素宽度不是1000px，先重置所有元素宽度，再展开当前元素
+        if (this.style.width !== '60vh') {
+            resetWidth();
+            this.style.width = '60vh';
+        } else {
+            // 如果已经是1000px，则缩回100px
+            this.style.width = '20vh';
+        }
+        // 阻止事件冒泡
+        event.stopPropagation();
+    }
+
+    // 重置所有 .parallelogram 元素宽度的函数
+    function resetWidth() {
+        document.querySelectorAll('.parallelogram').forEach(function(el) {
+            el.style.width = '20vh';
         });
+    }
+
+    // 为所有 .parallelogram 元素添加点击和触摸事件监听器
+    document.querySelectorAll('.parallelogram').forEach(function(parallelogram) {
+        parallelogram.addEventListener('touchstart', toggleWidth);
+    });
+
+    // 为文档添加点击事件监听器，用于重置宽度
+    document.addEventListener('touchstart', function(event) {
+        // 如果点击的不是 .parallelogram 元素，重置所有元素宽度
+        if (!event.target.classList.contains('parallelogram')) {
+            resetWidth();
+        }
     });
 </script>
 </body>

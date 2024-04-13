@@ -13,13 +13,13 @@ body {
   }
   
   .parallelogram {
-    width: 150px;
+    width: 20vh;
     height: 70vh;
     transform: skew(-20deg);
     background-size: cover;
     transition: width 1s;
     cursor: pointer;
-    margin: 0 20px;
+    margin: 0 5vh;
     z-index: 3;
     /* border: 1px solid rgb(0, 0, 0); */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.519), 0 6px 6px rgba(0, 0, 0, 0.623);
