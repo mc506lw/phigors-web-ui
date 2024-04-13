@@ -1,0 +1,61 @@
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* 确保粒子在上层 */
+}
+
+#particles-js::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0); /* 80%透明度的白色图层 */
+    backdrop-filter: blur(2px);
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('img_3860.jpeg'); /* 这里替换为你的背景图片的路径 */
+    background-size: cover;
+    z-index: 0; /* 确保背景在下层 */
+}
+
+#background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* 80%透明度的黑色图层 */
+    backdrop-filter: blur(15px);
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* 文本颜色 */
+    z-index: 2; /* 确保内容在粒子和背景之上 */
+}
+
+#title {
+    font-size: 4em; /* 标题字体大小 */
+    text-shadow: 0 0 10px #16566f, 0 0 20px #16566f, 0 0 30px #16566f, 0 0 40px #16566f; /* 蓝光效果 */
+}
+
+#text {
+    font-size: 1.2em; /* 文本字体大小 */
+}
+
+#text a {
+    color: #fff; /* 链接文本颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
