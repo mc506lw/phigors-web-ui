@@ -12,7 +12,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0); /* 80%透明度的白色图层 */
+    background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(2px);
 }
 
@@ -59,3 +59,4 @@
     color: #fff; /* 链接文本颜色 */
     text-decoration: none; /* 去掉下划线 */
 }
+

@@ -1,0 +1,19 @@
+.parallelogram-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .parallelogram {
+    width: 100px;
+    height: 100px;
+    transform: skew(20deg);
+    background-size: cover;
+    transition: width 1s;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .parallelogram:hover {
+    width: 200px;
+    z-index: 3;
+  }
